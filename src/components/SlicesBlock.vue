@@ -22,6 +22,10 @@
             <template v-else-if="slice.slice_type === 'image_highlight'">
                 <image-highlight :slice="slice"/>
             </template>
+            <!-- Featured Products slice component -->
+            <template v-else-if="slice.slice_type === 'featured_products'">
+                <featured-products :slice="slice"/>
+            </template>
         </section>
     </div>
 </template>
@@ -33,6 +37,8 @@ const QuoteSlice = () => import("./slices/QuoteSlice.vue");
 const FullWidthImage = () => import("./slices/FullWidthImage.vue");
 const ImageGallery = () => import("./slices/ImageGallery.vue");
 const ImageHighlight = () => import("./slices/ImageHighlight.vue");
+const FeaturedProducts = () => import("./slices/FeaturedProducts.vue");
+
 
 export default {
   props: ['slices'],
@@ -42,7 +48,8 @@ export default {
     QuoteSlice,
     FullWidthImage,
     ImageGallery,
-    ImageHighlight
+    ImageHighlight,
+    FeaturedProducts
   },
 }
 </script>

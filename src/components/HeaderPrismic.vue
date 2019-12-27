@@ -1,6 +1,6 @@
 <template>
   <header class="site-header">
-    <router-link to="/" class="logo">Example Site</router-link>
+    <router-link to="/" class="logo">4Ocean</router-link>
     <nav>
       <ul>
         <li v-for="menuLink in menuLinks" :key="menuLink.id">
@@ -41,6 +41,11 @@ export default {
 .site-header {
   height: 30px;
   padding: 20px 0;
+  background-position: center center;
+  background-size: cover;
+  color: #358b35;
+  line-height: 1.75;
+  text-align: center;
 }
 .site-header,
 .site-header a {
@@ -52,7 +57,7 @@ export default {
 }
 .homepage .site-header,
 .homepage .site-header a {
-  color: #ffffff;
+  color: #358b35;
 }
 .homepage .site-header nav a:hover {
   color: #c8c9cb;

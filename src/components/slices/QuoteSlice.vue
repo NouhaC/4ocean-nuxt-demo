@@ -14,21 +14,21 @@ export default {
 <style scoped>
 .quote blockquote {
   display: block;
-  font-family: 'Lora', Serif; 
-  font-size: 36px;
-  font-style: italic;
+  font-family: 'SlatePro-Medium'; 
+  font-size: 20px;
+  font-style:normal;
   font-weight: normal; 
-  color: #484D52; 
+  color: navy; 
+  background-color:white;
   letter-spacing : 1.14;
   line-height: 1.5em;
-  quotes: "\201C""\201D""\2018""\2019";
   text-align: center;
 }
 .quote blockquote:before,
 .quote blockquote:after {
-  color: #e9e9e9;
+  color:white;
   content: open-quote;
-  font-family: 'Lora', Serif;
+  font-family: 'SlatePro-Medium';
   font-size: 2.5em;
   font-weight: 900;
   line-height: 0.1em;
