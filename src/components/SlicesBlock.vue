@@ -49,7 +49,7 @@ export default {
     FullWidthImage,
     ImageGallery,
     ImageHighlight,
-    FeaturedProducts
+    FeaturedProducts,
   },
 }
 </script>

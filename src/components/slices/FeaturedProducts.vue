@@ -4,7 +4,6 @@
       <div v-for="item in slice.items" :key="item.id" class="gallery-item">
         <img :src="item.catalog.image_url" class="gallery-item-img"/>
         <h3>{{ item.catalog.title }}</h3>
-        <p>{{ item.catalog.description}}</p>
         <p>
           <prismic-link :field="item.button_link" class="gallery-link">{{ $prismic.richTextAsPlain(item.button_label) }}</prismic-link>
         </p>
@@ -30,14 +29,6 @@ export default {
     flex-wrap: wrap;
     -webkit-justify-content: space-between; 
     justify-content: space-between; 
-    /*display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    /* display: -ms-flexbox; /* TWEENER - IE 10 */ 
-    /* display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    /* display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: space-between;
-    justify-content: space-between */
 }
 
 .gallery-item {
@@ -46,11 +37,6 @@ export default {
   -webkit-flex:  0 1 48%;
   -ms-flex:  0 1 48%;
   flex: 0 1 20%;
-  /* -webkit-box-flex: 0 1 48%;
-  -moz-box-flex: 0 1 48%;
-  -webkit-flex: 0 1 48%;
-  -ms-flex: 0 1 48%;
-  flex: 0 1 48% */
 }
 
 .gallery-item-img {
@@ -62,10 +48,8 @@ export default {
 }
 
 .gallery-link {
-  margin-top: -20px;
+  margin-bottom: 2px;
   text-transform: uppercase;
-/*  margin-top: -20px;
-  text-transform: uppercase; */
 }
 
 @media (max-width: 767px) {

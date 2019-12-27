@@ -1,6 +1,8 @@
 <template>
   <header class="site-header">
-    <router-link to="/" class="logo">4Ocean</router-link>
+    <router-link to="/" class="logo" >
+      <img class="logo" src="https://wesaidgotravel.com/wp-content/uploads/2017/06/4Ocean.png" alt="4Ocean Logo">
+    </router-link>
     <nav>
       <ul>
         <li v-for="menuLink in menuLinks" :key="menuLink.id">
@@ -39,33 +41,35 @@ export default {
 <style>
 /* Site header */
 .site-header {
-  height: 30px;
+  height: 40px;
   padding: 20px 0;
   background-position: center center;
   background-size: cover;
-  color: #358b35;
-  line-height: 1.75;
+  color: #0057B8;
+  line-height: 2;
   text-align: center;
 }
 .site-header,
 .site-header a {
   color: #484d52;
   font-weight: 700;
+  left: 2px;
 }
 .site-header nav a:hover {
   color: #72767B;
 }
 .homepage .site-header,
 .homepage .site-header a {
-  color: #358b35;
+  color: #0057B8;
 }
 .homepage .site-header nav a:hover {
   color: #c8c9cb;
 }
 .site-header .logo {
+  position: absolute;
+  left: 5%;
   display: inline-block;
-  font-size: 22px;
-  font-weight: 900;
+  width: 100px;
 }
 .site-header nav {
   float: right;

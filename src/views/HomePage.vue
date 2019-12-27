@@ -14,7 +14,6 @@
           {{ $prismic.richTextAsPlain(fields.title) }}
         </h2>
         <!-- Template for page tagline -->
-        <p class="banner-description">{{ $prismic.richTextAsPlain(fields.tagline) }}</p>
         <prismic-link class="banner-button" :field="fields.button_link">
           {{ $prismic.richTextAsPlain(fields.button_label) }}</prismic-link>
       </div>
@@ -58,7 +57,6 @@ export default {
         if (document) {
           this.documentId = document.id;
           const banner = document.data.homepage_banner[0];
-          this.fields.image = banner.image.url;
           this.fields.title = banner.title;
           this.fields.video = banner.video.url;
           this.fields.tagline = banner.tagline;
@@ -97,14 +95,13 @@ export default {
   height: 100%;
 }
 .banner-content {
-  text-align: center;
+  text-align: left;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
 }
-.banner-title,
-.banner-description {
+.banner-title {
   width: 100%;
   max-width: 490px;
   margin-left: auto;
@@ -117,6 +114,8 @@ export default {
   line-height: 70px;
 }
 .banner-button {
+  position: absolute;
+  left: 45%;
   background: #ffffff;
   border-radius: 7px;
   color: #484d52;
